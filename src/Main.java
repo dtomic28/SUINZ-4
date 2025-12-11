@@ -20,7 +20,6 @@ public class Main {
             // Bayes
             Map.entry("Naive Bayes", "weka.classifiers.bayes.NaiveBayes"),
             Map.entry("Bayes Net", "weka.classifiers.bayes.BayesNet"),
-            Map.entry("Naive Bayes Multinomial", "weka.classifiers.bayes.NaiveBayesMultinomial"),
 
             // Lazy
             Map.entry("IBk (KNN)", "weka.classifiers.lazy.IBk"),
@@ -30,9 +29,6 @@ public class Main {
             // Functions
             Map.entry("Logistic Regression", "weka.classifiers.functions.Logistic"),
             Map.entry("SMO (SVM)", "weka.classifiers.functions.SMO"),
-            Map.entry("Multilayer Perceptron", "weka.classifiers.functions.MultilayerPerceptron"),
-            Map.entry("Simple Linear Regression", "weka.classifiers.functions.SimpleLinearRegression"),
-            Map.entry("Stochastic Gradient Descent", "weka.classifiers.functions.SGD"),
 
             // Rules
             Map.entry("ZeroR", "weka.classifiers.rules.ZeroR"),
@@ -63,6 +59,7 @@ public class Main {
         ui.fillAlgorithms(ALGORITHMS);
         ui.fillSplits(SPLITS);
         ui.setCallback(Main::onTrain);
+        ui.outputArea.setEditable(false);
         frame.setSize(900, 700);
         frame.setContentPane(ui.root);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

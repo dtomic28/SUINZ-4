@@ -54,6 +54,7 @@ public class MainWindow {
 
             if (result == JFileChooser.APPROVE_OPTION) {
                 selectedFile = chooser.getSelectedFile();
+                dataPath.setText(selectedFile.getAbsolutePath());
             }
         });
 
