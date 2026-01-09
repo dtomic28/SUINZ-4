@@ -41,7 +41,6 @@ public class MainWindow {
     }
 
     public MainWindow() {
-        // constructor where you add listeners later
 
         importBtn.addActionListener(e -> {
             JFileChooser chooser = new JFileChooser();
